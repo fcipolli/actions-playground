@@ -1,0 +1,49 @@
+name: "Hello Fabio Cipolli"
+
+on:
+  push:
+  
+jobs:
+  print_hello_world_ubuntu:
+    name: Hello world Ubuntu!
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Hello world Ubuntu!
+        run: |
+          echo 'Ubuntu no AR'
+          date
+        
+  print_hello_world_windows:
+    name: Hello world Windows!
+    runs-on: windows-latest
+    
+    steps:
+      - name: Hello world Windows!
+        run: |
+          echo 'Windows no AR'
+          date
+        
+  print_hello_world_macos:
+    name: Hello world MacOS!
+    runs-on: macos-latest
+       
+    steps:
+      - name: Hello world MacOS!
+        run: |
+          echo 'MacOS no AR!'
+          date
+        
+  print_hello_world_ubuntu_ultimo:
+    name: Hello world Ubuntu_ultimo!
+    runs-on: ubuntu-latest
+    needs:
+      - print_hello_world_ubuntu
+      - print_hello_world_windows
+      - print_hello_world_macos
+      
+    steps:
+      - name: Hello world Ubuntu_ultimo!
+        run: |
+          echo 'Ultimo Ubuntu no AR!'
+          date
