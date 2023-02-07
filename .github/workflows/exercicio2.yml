@@ -6,7 +6,7 @@ jobs:
 
   cria_e_upload_artefatos:
     name: "Cria artefato e faz upload"
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     
     steps:
         - name: Checkout repository
