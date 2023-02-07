@@ -1,8 +1,9 @@
 name: "Exercicio 2"
 
-on: push
+on: [push]
 
 jobs:
+
   cria_e_upload_artefatos:
     name: "Cria artefato e faz upload"
     runs-on: ubuntu-lastest
